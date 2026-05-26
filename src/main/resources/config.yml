@@ -1,0 +1,82 @@
+# PointsPlus
+# Used for update checks.
+# Do not change unless you know what you are doing.
+config-version: 5
+
+storage:
+  # How often balances are persisted to players.yml.
+  save-interval-seconds: 300
+
+  # Saves immediately after every successful balance mutation.
+  save-on-mutation: true
+
+  # Number of entries shown per leaderboard page.
+  leaderboard-page-size: 10
+
+accounts:
+  # Admin writes can create accounts for offline names through the server's offline player lookup.
+  create-on-admin-write: true
+
+  # Player payments can create target accounts that are not already known.
+  # Keeping this false avoids typo-created balances.
+  create-pay-targets: false
+
+economy:
+  singular-name: "point"
+  plural-name: "points"
+  symbol: ""
+  allow-negative-balances: false
+  max-balance: 9223372036854775807
+
+payments:
+  enabled: true
+  minimum: 1
+  maximum: 9223372036854775807
+  notify-target: true
+
+placeholders:
+  # Registers %pointsplus_*% placeholders when PlaceholderAPI is installed.
+  enabled: true
+
+  # Also registers %playerpoints_*% placeholders for easier migrations.
+  playerpoints-compatibility: true
+
+messages:
+  prefix: "&#2b98fdPointsPlus &8› &7"
+  no-permission: "&#ED4245No permission."
+  players-only: "&#ED4245Only players can use that."
+  player-not-found: "&#ED4245No saved points account for that player."
+  invalid-amount: "&#ED4245Use a positive amount like &f100&#ED4245, &f1k&#ED4245, or &f1.5m&#ED4245."
+  amount-too-low: "&#ED4245Minimum amount is &f{amount}&#ED4245."
+  amount-too-high: "&#ED4245Maximum amount is &f{amount}&#ED4245."
+  insufficient-funds: "&#ED4245You need &f{amount}&#ED4245. Balance: &f{balance}&#ED4245."
+  transaction-failed: "&#ED4245Points transaction failed."
+  usage: "&7Usage: &#2b98fd/points <me|pay|look|lead|give|giveall|take|set|reset|broadcast|export|import|reload|save>"
+  usage-pay: "&7Usage: &#2b98fd/points pay <player> <amount>"
+  usage-look: "&7Usage: &#2b98fd/points look <player>"
+  usage-lead: "&7Usage: &#2b98fd/points lead [page]"
+  usage-give: "&7Usage: &#2b98fd/points give <player> <amount>"
+  usage-giveall: "&7Usage: &#2b98fd/points giveall <amount>"
+  usage-take: "&7Usage: &#2b98fd/points take <player> <amount>"
+  usage-set: "&7Usage: &#2b98fd/points set <player> <amount>"
+  usage-reset: "&7Usage: &#2b98fd/points reset <player>"
+  usage-broadcast: "&7Usage: &#2b98fd/points broadcast <player>"
+  status: "&7Version &f{version}&7. Accounts: &f{accounts}&7. PlaceholderAPI: &f{papi}&7."
+  balance-self: "&7Balance: &#2b98fd{balance}&7."
+  balance-other: "&f{player} &8› &7Balance &#2b98fd{balance}&7."
+  paid-sender: "&7Sent &#2b98fd{amount} &7to &f{target}&7. Balance: &#2b98fd{balance}&7."
+  paid-target: "&f{source} &7sent you &#2b98fd{amount}&7. Balance: &#2b98fd{balance}&7."
+  gave: "&7Gave &#2b98fd{amount} &7to &f{player}&7. Balance: &#2b98fd{balance}&7."
+  gave-all: "&7Gave &#2b98fd{amount} &7to &f{count} &7online players."
+  took: "&7Took &#2b98fd{amount} &7from &f{player}&7. Balance: &#2b98fd{balance}&7."
+  set: "&7Set &f{player}&7's balance to &#2b98fd{balance}&7."
+  reset: "&7Reset points for &f{player}&7."
+  saved: "&7Points data saved."
+  reloaded: "&#57F287Points reloaded."
+  exported: "&7Exported &f{count} &7accounts to &f{file}&7."
+  imported: "&7Imported &f{count} &7accounts from &f{file}&7."
+  import-file-missing: "&#ED4245Could not find &f{file}&#ED4245."
+  broadcast: "&f{player} &8› &7Balance &#2b98fd{balance}&7."
+  top-header: "&7Top points &8(page {page}/{pages})"
+  top-line: "&8#{rank} &f{player} &8› &#2b98fd{balance}"
+  top-empty: "&7No point balances have been recorded yet."

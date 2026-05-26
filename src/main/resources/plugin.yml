@@ -1,0 +1,75 @@
+name: PointsPlus
+version: 0.1.0
+main: dev.pointsplus.PointsPlusPlugin
+api-version: '26.1.2'
+author: SQWARE / Conflict
+website: https://sqware.gg
+description: Standalone points economy, leaderboards, payments, API events, and PlaceholderAPI support for Paper servers.
+softdepend:
+  - PlaceholderAPI
+commands:
+  points:
+    description: View and manage points.
+    usage: /points
+    aliases:
+      - pointsplus
+      - playerpoints
+      - pp
+      - p
+permissions:
+  pointsplus.me:
+    description: Allows players to view their own points.
+    default: true
+  pointsplus.pay:
+    description: Allows players to send points to another player.
+    default: true
+  pointsplus.look:
+    description: Allows viewing another player's points.
+    default: true
+  pointsplus.lead:
+    description: Allows viewing the points leaderboard.
+    default: true
+  pointsplus.reload:
+    description: Allows reloading PointsPlus.
+    default: op
+  pointsplus.save:
+    description: Allows saving PointsPlus data.
+    default: op
+  pointsplus.give:
+    description: Allows giving points to players.
+    default: op
+  pointsplus.giveall:
+    description: Allows giving points to all online players.
+    default: op
+  pointsplus.take:
+    description: Allows taking points from players.
+    default: op
+  pointsplus.set:
+    description: Allows setting player points.
+    default: op
+  pointsplus.reset:
+    description: Allows resetting player points.
+    default: op
+  pointsplus.broadcast:
+    description: Allows broadcasting a player's point balance.
+    default: op
+  pointsplus.export:
+    description: Allows exporting points data to storage.yml.
+    default: op
+  pointsplus.import:
+    description: Allows importing points data from storage.yml.
+    default: op
+  pointsplus.admin:
+    description: Allows all PointsPlus administrative commands.
+    default: op
+    children:
+      pointsplus.reload: true
+      pointsplus.save: true
+      pointsplus.give: true
+      pointsplus.giveall: true
+      pointsplus.take: true
+      pointsplus.set: true
+      pointsplus.reset: true
+      pointsplus.broadcast: true
+      pointsplus.export: true
+      pointsplus.import: true
