@@ -1,6 +1,6 @@
 # PointsPlus
 
-**Get the plugin jar, setup help, and updates in the SQWARE Discord: [discord.sqware.gg](https://discord.sqware.gg).**
+**Join the SQWARE Discord: [discord.sqware.gg](https://discord.sqware.gg).**
 
 PointsPlus is a Paper points economy plugin for Minecraft servers. It is a PlayerPoints-style replacement with UUID storage, payments, leaderboards, PlaceholderAPI support, a Java API, and cancellable balance-change events.
 
